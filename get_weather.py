@@ -1,10 +1,10 @@
 import requests
 import PySimpleGUI as sg
-
+import os
 def weather_data(zipcode):
 
     postCode = zipcode
-    apiKey = "e47162aa3104ea108326b75e05eb5833"
+    apiKey = os.environ['WEATHER_API_KEY']
     geoApiUrl = "http://api.openweathermap.org/geo/1.0/zip"
     weatherApiUrl = "https://api.openweathermap.org/data/2.5/weather"
 
